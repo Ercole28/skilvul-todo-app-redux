@@ -2,6 +2,7 @@ import { useState } from "react"
 import { addTask } from "../redux/slices/todoSlice"
 import { useSelector, useDispatch } from "react-redux"
 import TodosList from "./lists/TodosList"
+import Alert from "./alerts/Alert"
 
 export default function NewRedux(){
   const [todo, setTodo] = useState('')
@@ -71,14 +72,12 @@ export default function NewRedux(){
           Fill out the input field first! ✍️
         </p>
       )}
+
+      {/* Todos List */}
       {todos.length !== 0 ? (
         <TodosList todosData={filteredTodos}/>
       ) : (
-        <div className="animate-bounce mt-14">
-          <p className="text-lg text-center text-white">
-            Make your first to do 🙌
-          </p>
-        </div>
+        <Alert message={'Make your first to do 🙌'}/>
       )}
     </div>
   )

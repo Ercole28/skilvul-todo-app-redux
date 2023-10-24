@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Todo from '../molecules/Todo';
+import Alert from '../alerts/Alert';
 
 export default function TodosList({todosData}) {
   const todos = todosData;
@@ -11,11 +12,7 @@ export default function TodosList({todosData}) {
           <Todo key={item.id} {...item}/>
         ))
       ) : (
-        <div className="animate-bounce mt-14">
-          <p className="text-lg text-center text-white">
-            There is no result with your request 😭
-          </p>
-        </div>
+        <Alert message={'There is no result with your request 😭'}/>
       )}
     </div>
   );
