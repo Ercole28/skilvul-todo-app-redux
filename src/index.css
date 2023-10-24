@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+  *{
+    font-family: 'Sometype Mono', monospace;
+  }
+}
