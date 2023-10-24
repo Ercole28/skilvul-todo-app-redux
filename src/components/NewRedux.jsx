@@ -28,10 +28,8 @@ export default function NewRedux(){
     }
   }
 
-  // Function to handle filter change
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
-    dispatch(setFilter(e.target.value)); // Dispatch the filter change to Redux
   };
 
   const filteredTodos = todos.filter((todo) => {
