@@ -30,14 +30,14 @@ export default function TodoApp() {
       <InputTodo/>
 
       {/* Filter */}
-      <div className="flex gap-x-4 mb-5">
+      <div className="flex gap-x-3 sm:gap-x-4 mb-5">
         <button
           onClick={() => handleFilterChange('all')}
           className={`${
             filter === "all"
               ? "bg-sky-500 text-white"
               : "bg-slate-500 text-white"
-          } px-3 py-1 rounded-xl duration-200`}
+          } text-sm sm:text-base px-3 py-1 rounded-md sm:rounded-lg duration-200`}
         >
           All
         </button>
@@ -47,7 +47,7 @@ export default function TodoApp() {
             filter === "active"
               ? "bg-sky-500 text-white"
               : "bg-slate-500 text-white"
-          } px-3 py-1 rounded-xl duration-200`}
+          } text-sm sm:text-base px-3 py-1 rounded-md sm:rounded-lg duration-200`}
         >
           Active
         </button>
@@ -57,7 +57,7 @@ export default function TodoApp() {
             filter === "completed"
               ? "bg-sky-500 text-white"
               : "bg-slate-500 text-white"
-          } px-3 py-1 rounded-xl duration-200`}
+          } text-sm sm:text-base px-3 py-1 rounded-md sm:rounded-lg duration-200`}
         >
           Completed
         </button>
