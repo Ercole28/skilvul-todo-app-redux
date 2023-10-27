@@ -28,29 +28,29 @@ export default function Todo(props) {
     <>
       <div
         key={id}
-        className="w-full flex items-center justify-between border border-slate-100/50 px-3 py-2 rounded-lg mb-2 hover:translate-x-2 duration-300 ease-out"
+        className="bg-[#fcefd2] w-full flex flex-col sm:flex-row sm:items-center justify-between gap-y-2 border border-amber-700 px-3.5 py-3 rounded-lg mb-2 hover:translate-x-2 duration-300 ease-out overflow-hidden"
       >
         <div className="flex gap-x-2 items-center">
           <button 
             onClick={() => toggleTodo(id)}
-            className="flex justify-center items-center w-6 h-6 border border-slate-100/50 rounded-sm cursor-pointer"
+            className="shrink-0 flex justify-center items-center w-6 h-6 bg-white border-2 border-amber-500 rounded-sm cursor-pointer"
           >
             {completed && (
-              <FontAwesomeIcon icon={faCheck} className="text-lg text-green-400" />
+              <FontAwesomeIcon icon={faCheck} className="text-xl text-amber-800"/>
             )}
           </button>
-          <span className={`${completed ? "line-through" : ""} text-white cursor-default`}>{text}</span>
+          <p className={`${completed ? "line-through" : ""} text-amber-800 cursor-default`}>{text}</p>
         </div>
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 ml-auto sm:ml-0">
           <button
             onClick={toggleModal}
-            className="flex justify-center items-center bg-amber-400 w-10 h-8 rounded-md"
+            className="flex justify-center items-center bg-amber-400 w-10 h-8 rounded-md border-2 border-amber-500"
           >
             <FontAwesomeIcon icon={faEdit} color={"black"}/>
           </button>
           <button
             onClick={() => removeTodo(id)}
-            className="flex justify-center items-center bg-red-500 w-10 h-8 rounded-md"
+            className="flex justify-center items-center bg-red-500 w-10 h-8 rounded-md border-2 border-amber-500"
           >
             <FontAwesomeIcon icon={faTrash} color={"white"} />
           </button>
