@@ -6,7 +6,7 @@ export default function TodosList({todosData}) {
   const todos = todosData;
 
   return (
-    <div className="w-full">
+    <div className="w-full pb-5">
       {todos.length !== 0 ? (
         todos.map((item) => (
           <Todo key={item.id} {...item}/>
