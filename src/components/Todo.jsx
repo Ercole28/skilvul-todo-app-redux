@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { toggleTask, removeTask } from "../../redux/slices/todoSlice"
+import { toggleTask, removeTask } from "../redux/slices/todoSlice"
 import { useDispatch } from "react-redux"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faEdit, faTrash, faXmark } from "@fortawesome/free-solid-svg-icons"
-import EditModal from '../modals/editModal';
+import EditModal from './modals/editModal';
 
 export default function Todo(props) {
   const { id, completed, text } = props;
