@@ -1,5 +1,5 @@
 import TodoApp from "./components/TodoApp";
-import TodoIllustration from "./assets/todo-app"
+import TodoIllustration from "./assets/todo-app.png"
 
 export default function App() {
   return (
