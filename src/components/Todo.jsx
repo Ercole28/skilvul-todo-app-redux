@@ -4,7 +4,7 @@ import { toggleTask, removeTask } from "../redux/slices/todoSlice"
 import { useDispatch } from "react-redux"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons"
-import EditModal from './modals/editModal';
+import EditModal from './modals/EditModal';
 
 export default function Todo(props) {
   const { id, completed, text } = props;
