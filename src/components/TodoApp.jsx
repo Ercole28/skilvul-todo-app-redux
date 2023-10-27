@@ -66,14 +66,12 @@ export default function NewRedux(){
         <button onClick={addTodo} className="font-bold bg-slate-600 px-10 py-2 rounded-md text-white">Add</button>
       </form>
 
-      {/* Alert */}
       {alert && (
         <p className="text-center text-red-500 mb-3">
           Fill out the input field first! ✍️
         </p>
       )}
 
-      {/* Todos List */}
       {todos.length !== 0 ? (
         <TodosList todosData={filteredTodos}/>
       ) : (
