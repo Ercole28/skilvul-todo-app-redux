@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Todo from '../molecules/Todo';
+import Todo from '../Todo';
 import Alert from '../alerts/Alert';
 
 export default function TodosList({todosData}) {
