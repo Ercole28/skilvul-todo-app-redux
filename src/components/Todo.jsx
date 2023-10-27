@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { toggleTask, removeTask } from "../redux/slices/todoSlice"
 import { useDispatch } from "react-redux"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faEdit, faTrash, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faCheck, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons"
 import EditModal from './modals/editModal';
 
 export default function Todo(props) {
