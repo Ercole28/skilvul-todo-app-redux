@@ -1,16 +1,12 @@
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import TodosList from "./lists/TodosList";
 import Alert from "./alerts/Alert";
 import InputTodo from "./InputTodo";
+import FilterTodo from "./FilterTodo";
 
 export default function TodoApp() {
-  const [filter, setFilter] = useState("all");
   const todos = useSelector((state) => state.todo.tasks);
-
-  const handleFilterChange = (newFilter) => {
-    setFilter(newFilter);
-  };
+  const filter = useSelector((state) => state.todo.filter);
 
   const filteredTodos = todos.filter((todo) => {
     if (filter === "all") {
@@ -26,44 +22,8 @@ export default function TodoApp() {
   return (
     <div className="w-full">
       <h1 className="font-bold text-sm text-white mb-1 -ml-1">⭐ New Redux</h1>
-      {/* Input Todo */}
       <InputTodo/>
-
-      {/* Filter */}
-      <div className="flex gap-x-3 sm:gap-x-4 mb-5">
-        <button
-          onClick={() => handleFilterChange('all')}
-          className={`${
-            filter === "all"
-              ? "bg-sky-500 text-white"
-              : "bg-slate-500 text-white"
-          } text-sm sm:text-base px-3 py-1 rounded-md sm:rounded-lg duration-200`}
-        >
-          All
-        </button>
-        <button
-          onClick={() => handleFilterChange("active")}
-          className={`${
-            filter === "active"
-              ? "bg-sky-500 text-white"
-              : "bg-slate-500 text-white"
-          } text-sm sm:text-base px-3 py-1 rounded-md sm:rounded-lg duration-200`}
-        >
-          Active
-        </button>
-        <button
-          onClick={() => handleFilterChange("completed")}
-          className={`${
-            filter === "completed"
-              ? "bg-sky-500 text-white"
-              : "bg-slate-500 text-white"
-          } text-sm sm:text-base px-3 py-1 rounded-md sm:rounded-lg duration-200`}
-        >
-          Completed
-        </button>
-      </div>
-
-      {/* TodoList */}
+      <FilterTodo/>
       {todos.length !== 0 ? (
         <TodosList todosData={filteredTodos} />
       ) : (
