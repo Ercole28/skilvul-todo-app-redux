@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { setTaskFilter } from "../redux/slices/todoSlice";
 
-export default function FilterTodo() {
+export default function TodoFilter() {
   const filter = useSelector((state) => state.todo.filter);
   const dispatch = useDispatch()
 

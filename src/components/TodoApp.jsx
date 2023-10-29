@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import TodosList from "./lists/TodosList";
 import Alert from "./alerts/Alert";
-import InputTodo from "./InputTodo";
-import FilterTodo from "./FilterTodo";
+import TodoInput from "./TodoInput";
+import TodoFilter from "./TodoFilter";
 
 export default function TodoApp() {
   const todos = useSelector((state) => state.todo.tasks);
@@ -22,8 +22,8 @@ export default function TodoApp() {
   return (
     <div className="w-full">
       <h1 className="font-bold text-sm text-white mb-1 -ml-1">⭐ New Redux</h1>
-      <InputTodo/>
-      <FilterTodo/>
+      <TodoInput/>
+      <TodoFilter/>
       {todos.length !== 0 ? (
         <TodosList todosData={filteredTodos} />
       ) : (

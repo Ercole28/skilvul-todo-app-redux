@@ -2,7 +2,7 @@ import { useState } from "react";
 import { addTask } from "../redux/slices/todoSlice";
 import { useDispatch } from "react-redux";
 
-export default function InputTodo() {
+export default function TodoInput() {
   const [todo, setTodo] = useState("");
   const dispatch = useDispatch();
   const [alert, setAlert] = useState(false);
