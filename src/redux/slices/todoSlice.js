@@ -8,11 +8,12 @@ export const todoSlice = createSlice({
   },
   reducers: {
     addTask: (state, action) => {
-      state.tasks.push({
+      const newTask = {
         id: Date.now(),
         text: action.payload,
         completed: false,
-      });
+      };
+      state.tasks.push(newTask);
     },
     toggleTask: (state, action) => {
       const task = state.tasks.find((t) => t.id === action.payload);
